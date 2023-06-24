@@ -1,0 +1,25 @@
+.TH COFFEE 1 "18 June 2023"
+.SH NAME
+coffee \- Control remote coffee machine
+.SH SYSNOPSIS
+\fBcoffee\fP [ -h \ -b ] -t \fItype\fP \fIamount\fP
+.SH DESCRIPTION
+\fIcoffee\fP queues a request to the remote coffee machine at the 
+device \fB/dev/cf0\fR. The required \fIamount\fP argument specifies 
+the number of cups, generally between 0 and 15 on ISO standard 
+coffee machines. The required argument \fI-t type\fP specifies 
+the type, being colombian, regular, or decaf.
+.SS OPTIONS
+.TP
+\fB-h\fP
+Brew hot coffee. Cold is the default.
+.TP
+\fB-b\fP
+Burn coffee. Especially useful when executing \fIcoffee\fP on behalf 
+of your boss.
+.SH FILES
+.TP
+\fI/dev/cf0\fR
+The remote coffee machine device
+.SH BUGS
+May require human intervention if coffee supply is exhausted.
